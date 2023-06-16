@@ -1,0 +1,89 @@
+{
+  "_AppLayout-d6b78d25.js": {
+    "file": "assets/AppLayout-d6b78d25.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "resources/js/Pages/Auth/Login.jsx": {
+    "file": "assets/Login-7e4b1b4c.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_AppLayout-d6b78d25.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Auth/Login.jsx"
+  },
+  "resources/js/Pages/Auth/Register.jsx": {
+    "file": "assets/Register-f242598c.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_AppLayout-d6b78d25.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Auth/Register.jsx"
+  },
+  "resources/js/Pages/Index.jsx": {
+    "file": "assets/Index-82d5768e.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Index.jsx"
+  },
+  "resources/js/Pages/Profile/Index.jsx": {
+    "file": "assets/Index-40af6a84.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_AppLayout-d6b78d25.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Profile/Index.jsx"
+  },
+  "resources/js/Pages/Reservation.jsx": {
+    "file": "assets/Reservation-4e818c99.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Reservation.jsx"
+  },
+  "resources/js/Pages/Reservation/History.jsx": {
+    "file": "assets/History-80be8dab.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_AppLayout-d6b78d25.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Reservation/History.jsx"
+  },
+  "resources/js/Pages/Reservation/Merci.jsx": {
+    "file": "assets/Merci-e170c4dd.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Reservation/Merci.jsx"
+  },
+  "resources/js/app.css": {
+    "file": "assets/app-b024ca76.css",
+    "src": "resources/js/app.css"
+  },
+  "resources/js/app.jsx": {
+    "css": [
+      "assets/app-b024ca76.css"
+    ],
+    "dynamicImports": [
+      "resources/js/Pages/Auth/Login.jsx",
+      "resources/js/Pages/Auth/Register.jsx",
+      "resources/js/Pages/Index.jsx",
+      "resources/js/Pages/Profile/Index.jsx",
+      "resources/js/Pages/Reservation.jsx",
+      "resources/js/Pages/Reservation/History.jsx",
+      "resources/js/Pages/Reservation/Merci.jsx"
+    ],
+    "file": "assets/app-db8d549a.js",
+    "isEntry": true,
+    "src": "resources/js/app.jsx"
+  }
+}
