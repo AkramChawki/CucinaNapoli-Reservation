@@ -328,7 +328,7 @@ function Form() {
                                     />
                                 </div>
                             </div>
-                            <div className="relative flex items-start col-span-2">
+                            <div className="relative flex items-start sm:col-span-2">
                                 <div className="flex items-center h-5">
                                     <input
                                         id="comments"
