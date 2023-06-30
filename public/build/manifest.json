@@ -1,30 +1,30 @@
 {
-  "_AppLayout-705469af.js": {
-    "file": "assets/AppLayout-705469af.js",
+  "_AppLayout-90245681.js": {
+    "file": "assets/AppLayout-90245681.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Auth/Login.jsx": {
-    "file": "assets/Login-f6a787c8.js",
+    "file": "assets/Login-192c61e9.js",
     "imports": [
       "resources/js/app.jsx",
-      "_AppLayout-705469af.js"
+      "_AppLayout-90245681.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/Login.jsx"
   },
   "resources/js/Pages/Auth/Register.jsx": {
-    "file": "assets/Register-7d40614e.js",
+    "file": "assets/Register-ad1bc425.js",
     "imports": [
       "resources/js/app.jsx",
-      "_AppLayout-705469af.js"
+      "_AppLayout-90245681.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/Register.jsx"
   },
   "resources/js/Pages/Index.jsx": {
-    "file": "assets/Index-a70ca823.js",
+    "file": "assets/Index-1808b486.js",
     "imports": [
       "resources/js/app.jsx"
     ],
@@ -32,16 +32,16 @@
     "src": "resources/js/Pages/Index.jsx"
   },
   "resources/js/Pages/Profile/Index.jsx": {
-    "file": "assets/Index-0168d155.js",
+    "file": "assets/Index-5d15e550.js",
     "imports": [
       "resources/js/app.jsx",
-      "_AppLayout-705469af.js"
+      "_AppLayout-90245681.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Profile/Index.jsx"
   },
   "resources/js/Pages/Reservation.jsx": {
-    "file": "assets/Reservation-a2082b63.js",
+    "file": "assets/Reservation-519c5af7.js",
     "imports": [
       "resources/js/app.jsx"
     ],
@@ -49,16 +49,16 @@
     "src": "resources/js/Pages/Reservation.jsx"
   },
   "resources/js/Pages/Reservation/History.jsx": {
-    "file": "assets/History-415ed5c0.js",
+    "file": "assets/History-10099a9d.js",
     "imports": [
       "resources/js/app.jsx",
-      "_AppLayout-705469af.js"
+      "_AppLayout-90245681.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Reservation/History.jsx"
   },
   "resources/js/Pages/Reservation/Merci.jsx": {
-    "file": "assets/Merci-8221a0ba.js",
+    "file": "assets/Merci-2bf0b276.js",
     "imports": [
       "resources/js/app.jsx"
     ],
@@ -82,7 +82,7 @@
       "resources/js/Pages/Reservation/History.jsx",
       "resources/js/Pages/Reservation/Merci.jsx"
     ],
-    "file": "assets/app-f72e0b1f.js",
+    "file": "assets/app-d6c5d50c.js",
     "isEntry": true,
     "src": "resources/js/app.jsx"
   }
