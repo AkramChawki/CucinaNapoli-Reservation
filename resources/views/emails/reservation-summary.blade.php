@@ -745,7 +745,7 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                                     </p>
                                     <p class="ml-4">
                                         Date et Heur de reservation : 
-                                        <code class="text-sm font-bold text-gray-900"> {{ $reservation->date }} {{ $reservation->time }}</code>
+                                        <code class="text-sm font-bold text-gray-900"> {{ $reservation->selectedDate }}</code>
                                     </p>
                                     <p class="ml-4">
                                         Telephone de Confirmation : 
