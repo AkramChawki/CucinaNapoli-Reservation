@@ -88,6 +88,7 @@ class ReservationController extends Controller
         DB::commit();
 
         Mail::to($request->email)->send(new ReservationSummary($reservation));
+        Mail::to("admin@reservation.cucinanapoli.com")->send(new ReservationSummary($reservation));
 
         return redirect("/Reservation/Merci");
     }
