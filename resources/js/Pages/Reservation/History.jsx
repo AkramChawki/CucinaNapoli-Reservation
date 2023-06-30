@@ -71,22 +71,12 @@ export default function History({ reservations }) {
                                                                             {" "}
                                                                             <time
                                                                                 dateTime={
-                                                                                    reservation.date
+                                                                                    reservation.selectedDate
                                                                                 }
                                                                             >
                                                                                 {
-                                                                                    reservation.date
+                                                                                    reservation.selectedDate
                                                                                 }{" "}
-                                                                            </time>
-                                                                            à{" "}
-                                                                            <time
-                                                                                dateTime={
-                                                                                    reservation.time
-                                                                                }
-                                                                            >
-                                                                                {
-                                                                                    reservation.time
-                                                                                }
                                                                             </time>
                                                                         </p>
                                                                     </div>

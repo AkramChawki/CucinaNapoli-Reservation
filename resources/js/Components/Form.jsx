@@ -1,65 +1,45 @@
 import { useForm } from "@inertiajs/react";
-import React, { useState, useEffect } from "react";
+import React from "react";
+import moment from "moment";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { DateTimePicker } from "@mui/x-date-pickers";
 
 function Form() {
-    const [selectedDate, setSelectedDate] = useState("");
-    const [selectedTime, setSelectedTime] = useState("");
-    const [minDate, setMinDate] = useState("");
-    const [minTime, setMinTime] = useState("");
     const queryParameters = new URLSearchParams(window.location.search);
     const restaurant = queryParameters.get("restaurant");
     var localisation = "";
 
     if (restaurant === "1") {
-        localisation = "https://www.google.com/maps/place/CUCINA+NAPOLI+-+Anoual+-+Restaurant+italien/@33.5692406,-7.6126558,15z/data=!4m6!3m5!1s0xda7d3f983bc2dd5:0x33b97595312098d1!8m2!3d33.5692406!4d-7.6126558!16s%2Fg%2F11rkl6_dzx?entry=ttu";
+        localisation =
+            "https://www.google.com/maps/place/CUCINA+NAPOLI+-+Anoual+-+Restaurant+italien/@33.5692406,-7.6126558,15z/data=!4m6!3m5!1s0xda7d3f983bc2dd5:0x33b97595312098d1!8m2!3d33.5692406!4d-7.6126558!16s%2Fg%2F11rkl6_dzx?entry=ttu";
     } else {
-        localisation = "https://www.google.com/maps/place/CUCINA+NAPOLI+-+Palmier+-+Restaurant+italien/@33.5792518,-7.6266445,15z/data=!4m6!3m5!1s0xda7d343b43401df:0x4a188f323bca5ea6!8m2!3d33.5792518!4d-7.6266445!16s%2Fg%2F11sdzp6tq7?entry=ttu";
+        localisation =
+            "https://www.google.com/maps/place/CUCINA+NAPOLI+-+Palmier+-+Restaurant+italien/@33.5792518,-7.6266445,15z/data=!4m6!3m5!1s0xda7d343b43401df:0x4a188f323bca5ea6!8m2!3d33.5792518!4d-7.6266445!16s%2Fg%2F11sdzp6tq7?entry=ttu";
     }
 
-    useEffect(() => {
-        const now = new Date();
-        const currentDate = now.toISOString().split("T")[0];
-        setMinDate(currentDate);
-
-        const currentTime = now.toLocaleTimeString([], {
-            hour: "2-digit",
-            minute: "2-digit",
-        });
-        setMinTime(currentTime);
-    }, []);
-
-    const handleDateChange = (e) => {
-        const today = new Date().toISOString().split("T")[0];
-        const newDate = e.target.value;
-
-        setSelectedDate(newDate);
-
-        if (newDate > today) {
-            setMinTime("");
-        } else {
-            const currentTime = new Date().toLocaleTimeString([], {
-                hour: "2-digit",
-                minute: "2-digit",
-            });
-            setMinTime(currentTime);
-        }
-    };
-
-    const { data, setData, post, processing, errors } = useForm({
+    const { data, setData, post, errors } = useForm({
         nom: "",
         prenom: "",
         telephone: "",
         email: "",
         adults: "1",
         childs: "0",
-        date: "",
-        time: "",
-        notes: "",
+        selectedDate: "",
+        notes: '',
         create_account: false,
     });
 
+    const handleDateChange = (date) => {
+        setData("selectedDate", date.format("YYYY-MM-DD HH:mm:ss"));
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        const formattedDate = moment(data.selectedDate).format(
+            "YYYY-MM-DD HH:mm:ss"
+        );
 
         const queryParameters = new URLSearchParams(window.location.search);
         const restaurant = queryParameters.get("restaurant");
@@ -71,7 +51,7 @@ function Form() {
             ? `et pour ${formDataObj.childs} enfant(s)`
             : "";
 
-        const text = `Bonjour, Je suis ${formDataObj.nom} ${formDataObj.prenom} je veux réserver une table pour ${formDataObj.adults} personne(s) ${childs} le ${formDataObj.date} à ${formDataObj.time}, Notes : ${formDataObj.notes}, Veuillez confirmer ma reservation sur le numéro ${formDataObj.telephone} et sur l email ${formDataObj.email}`;
+        const text = `Bonjour, Je suis ${formDataObj.nom} ${formDataObj.prenom} je veux réserver une table pour ${formDataObj.adults} personne(s) ${childs} le ${formattedDate}, Notes : ${formDataObj.notes}, Veuillez confirmer ma reservation sur le numéro ${formDataObj.telephone} et sur l email ${formDataObj.email}`;
 
         var phone = "";
 
@@ -85,11 +65,12 @@ function Form() {
             text
         )}`;
 
-        post("/reservation");
+        post("/reservation", { selectedDate: formattedDate });
 
         window.open(lien, "_blank").focus();
     };
     console.log(errors);
+    console.log(data);
     return (
         <div className="relative bg-white mt-10 lg:mr-10">
             <div className="lg:absolute lg:inset-0">
@@ -257,46 +238,35 @@ function Form() {
                                     </select>
                                 </div>
                             </div>
-                            <div>
+                            <div className="sm:col-span-2">
                                 <label
                                     htmlFor=""
                                     className="block text-sm font-medium text-gray-700"
                                 >
-                                    Date
+                                    Date et Heure
                                 </label>
                                 <div className="mt-1">
-                                    <input
-                                        type="date"
-                                        name="date"
-                                        value={data.date}
-                                        onChange={(e) =>
-                                            setData("date", e.target.value)
-                                        }
-                                        min={minDate}
-                                        id=""
-                                        className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm rounded-md"
-                                    />
-                                </div>
-                            </div>
-                            <div>
-                                <label
-                                    htmlFor=""
-                                    className="block text-sm font-medium text-gray-700"
-                                >
-                                    Date
-                                </label>
-                                <div className="mt-1">
-                                    <input
-                                        type="time"
-                                        name="time"
-                                        value={data.time}
-                                        onChange={(e) =>
-                                            setData("time", e.target.value)
-                                        }
-                                        min={minTime}
-                                        id="time"
-                                        className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm rounded-md"
-                                    />
+                                    <LocalizationProvider
+                                        dateAdapter={AdapterDayjs}
+                                    >
+                                        <DateTimePicker
+                                            disablePast
+                                            ampm={false}
+                                            views={[
+                                                "day",
+                                                "month",
+                                                "year",
+                                                "hours",
+                                                "minutes",
+                                            ]}
+                                            value={data.selectedDate}
+                                            onChange={handleDateChange}
+                                            renderInput={(props) => (
+                                                <TextField {...props} />
+                                            )}
+                                            className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm rounded-md"
+                                        />
+                                    </LocalizationProvider>
                                 </div>
                             </div>
                             <div className="sm:col-span-2">
