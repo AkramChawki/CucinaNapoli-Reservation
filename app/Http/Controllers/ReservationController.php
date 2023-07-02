@@ -89,8 +89,15 @@ class ReservationController extends Controller
         $reservation->save();
         DB::commit();
 
-        // Mail::to($request->email)->send(new ReservationSummary($reservation));
-        // Mail::to("admin@reservation.cucinanapoli.com")->send(new ReservationSummary($reservation));
+        if ($reservation->restau == "anoual") {
+            Mail::to($request->email)->send(new ReservationSummary($reservation));
+            Mail::to("anoual@reservation.cucinanapoli.com")->send(new ReservationSummary($reservation));
+        } else {
+            Mail::to($request->email)->send(new ReservationSummary($reservation));
+            Mail::to("palmier@reservation.cucinanapoli.com")->send(new ReservationSummary($reservation));
+        }
+        
+        
 
         return redirect("/Reservation/Merci");
     }
