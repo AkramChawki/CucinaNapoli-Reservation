@@ -32,6 +32,7 @@ class ReservationController extends Controller
             "adults" => "required",
             "childs" => "required",
             'selectedDate' => 'required|date_format:Y-m-d H:i:s',
+            "restau" => "required",
             "notes" => "nullable",
         ]);
 
@@ -73,6 +74,7 @@ class ReservationController extends Controller
         $reservation->adults = $request->adults;
         $reservation->childs = $request->childs;
         $reservation->selectedDate = $request->selectedDate;
+        $reservation->restau = $request->restau;
         $reservation->notes = $request->notes;
         $reservation->user_id = $account->id ?? null;
         DB::beginTransaction();
@@ -87,8 +89,8 @@ class ReservationController extends Controller
         $reservation->save();
         DB::commit();
 
-        Mail::to($request->email)->send(new ReservationSummary($reservation));
-        Mail::to("admin@reservation.cucinanapoli.com")->send(new ReservationSummary($reservation));
+        // Mail::to($request->email)->send(new ReservationSummary($reservation));
+        // Mail::to("admin@reservation.cucinanapoli.com")->send(new ReservationSummary($reservation));
 
         return redirect("/Reservation/Merci");
     }

@@ -9,11 +9,14 @@ function Form() {
     const queryParameters = new URLSearchParams(window.location.search);
     const restaurant = queryParameters.get("restaurant");
     var localisation = "";
+    var restau = "";
 
     if (restaurant === "1") {
+        restau = "anoual"
         localisation =
             "https://www.google.com/maps/place/CUCINA+NAPOLI+-+Anoual+-+Restaurant+italien/@33.5692406,-7.6126558,15z/data=!4m6!3m5!1s0xda7d3f983bc2dd5:0x33b97595312098d1!8m2!3d33.5692406!4d-7.6126558!16s%2Fg%2F11rkl6_dzx?entry=ttu";
     } else {
+        restau = "palmier"
         localisation =
             "https://www.google.com/maps/place/CUCINA+NAPOLI+-+Palmier+-+Restaurant+italien/@33.5792518,-7.6266445,15z/data=!4m6!3m5!1s0xda7d343b43401df:0x4a188f323bca5ea6!8m2!3d33.5792518!4d-7.6266445!16s%2Fg%2F11sdzp6tq7?entry=ttu";
     }
@@ -26,6 +29,7 @@ function Form() {
         adults: "1",
         childs: "0",
         selectedDate: "",
+        restau: restau,
         notes: '',
         create_account: false,
     });
