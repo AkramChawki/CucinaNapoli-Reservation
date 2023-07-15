@@ -37,7 +37,6 @@ class ReservationController extends Controller
         ]);
 
         $account = null;
-        $score = 0;
 
         if (auth()->user()) {
             $account = auth()->user();
@@ -60,9 +59,6 @@ class ReservationController extends Controller
         }
 
         if ($account) {
-            $account->update([
-                "points" => $account->points + 10
-            ]);
             Auth::login($account);
         }
         
