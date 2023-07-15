@@ -19,6 +19,7 @@ class Reservation extends Model
         'selectedDate',
         'restau',
         'notes',
+        'confirmed',
         'user_id',
     ];
 
