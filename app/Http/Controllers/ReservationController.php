@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\ReservationSummary;
+use App\Mail\WelcomeMail;
 use App\Models\Reservation;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -87,9 +88,11 @@ class ReservationController extends Controller
 
         if ($reservation->restau == "anoual") {
             Mail::to($request->email)->send(new ReservationSummary($reservation));
+            Mail::to($request->email)->send(new WelcomeMail());
             Mail::to("anoual@reservation.cucinanapoli.com")->send(new ReservationSummary($reservation));
         } else {
             Mail::to($request->email)->send(new ReservationSummary($reservation));
+            Mail::to($request->email)->send(new WelcomeMail());
             Mail::to("palmier@reservation.cucinanapoli.com")->send(new ReservationSummary($reservation));
         }
         
