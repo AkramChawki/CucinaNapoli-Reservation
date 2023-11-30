@@ -4,6 +4,7 @@ import moment from "moment";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DateTimePicker } from "@mui/x-date-pickers";
+import dayjs from 'dayjs';
 
 function Form() {
     const queryParameters = new URLSearchParams(window.location.search);
@@ -21,7 +22,7 @@ function Form() {
             "https://www.google.com/maps/place/CUCINA+NAPOLI+-+Palmier+-+Restaurant+italien/@33.5792518,-7.6266445,15z/data=!4m6!3m5!1s0xda7d343b43401df:0x4a188f323bca5ea6!8m2!3d33.5792518!4d-7.6266445!16s%2Fg%2F11sdzp6tq7?entry=ttu";
     }
 
-    const { data, setData, post, errors } = useForm({
+    const { data, setData, post, transform } = useForm({
         nom: "",
         prenom: "",
         telephone: "",
@@ -31,6 +32,7 @@ function Form() {
         selectedDate: "",
         restau: restau,
         notes: '',
+        lien: '',
         create_account: false,
     });
 
@@ -68,13 +70,13 @@ function Form() {
         const lien = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(
             text
         )}`;
+        transform((data) => ({
+            ...data,
+            lien
+        }))
+        post("/reservation");
 
-        post("/reservation", { selectedDate: formattedDate });
-
-        window.open(lien, "_blank").focus();
     };
-    console.log(errors);
-    console.log(data);
     return (
         <div className="relative bg-white mt-10 lg:mr-10">
             <div className="lg:absolute lg:inset-0">
@@ -263,7 +265,7 @@ function Form() {
                                                 "hours",
                                                 "minutes",
                                             ]}
-                                            value={data.selectedDate}
+                                            value={dayjs(data.selectedDate)}
                                             onChange={handleDateChange}
                                             renderInput={(props) => (
                                                 <TextField {...props} />

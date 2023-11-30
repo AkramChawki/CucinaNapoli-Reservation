@@ -22,7 +22,7 @@ class ReservationController extends Controller
             "reservations" => auth()->user()->reservations()->get(),
         ]);
     }
-    
+
     public function store(Request $request)
     {
         $request->validate([
@@ -62,7 +62,7 @@ class ReservationController extends Controller
         if ($account) {
             Auth::login($account);
         }
-        
+
         $reservation = new Reservation();
         $reservation->nom = $request->nom;
         $reservation->prenom = $request->prenom;
@@ -95,10 +95,10 @@ class ReservationController extends Controller
             Mail::to($request->email)->send(new WelcomeMail());
             Mail::to("palmier@reservation.cucinanapoli.com")->send(new ReservationSummary($reservation));
         }
-        
-        
 
-        return redirect("/Reservation/Merci");
+
+
+        return redirect()->route("merci", ["url" => $request->lien]);
     }
 
     public function show($num)

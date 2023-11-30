@@ -41,5 +41,5 @@ Route::middleware('auth')->group(function () {
 });
 
 
-Route::inertia('/Reservation/Merci', "Reservation/Merci");
-require __DIR__.'/auth.php';
+Route::inertia('/Reservation/Merci', "Reservation/Merci")->name("merci");
+require __DIR__ . '/auth.php';
