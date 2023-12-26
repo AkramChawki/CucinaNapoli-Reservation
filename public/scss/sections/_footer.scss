@@ -1,0 +1,45 @@
+footer {
+    padding: 6rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    ul {
+        padding: 0;
+        margin: 2rem 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+
+        li {
+            a {
+                font-weight: bold;
+                padding: 10px;
+                margin: 0 5px;
+                position: relative;
+
+            }
+        }
+    }
+
+    hr {
+        border: 0.5px solid v(color);
+        width: 300px;
+    }
+    p, p + a {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 15px;
+        color: rgba($color: v(color), $alpha: 0.8); 
+    }
+    svg {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 57%);
+        width: 781px;
+
+        circle {
+            stroke: v(color);
+        }
+    }
+}

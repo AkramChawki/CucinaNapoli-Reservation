@@ -1,0 +1,130 @@
+#showcase {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    .content {
+        overflow: hidden;
+        h1 {
+            min-width: 579px;
+            max-width: 579px;
+            white-space: normal;
+            font-size: 90px;
+            line-height: 90px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    .social-media {
+        display: flex;
+        align-items: center;
+
+        a {
+            background: aqua;
+            svg {
+                fill: v(color);
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .btn {
+        margin-top: 1.5rem;
+    }
+
+    .vertical_text {
+        position: absolute;
+        transform: rotate(-90deg);
+        bottom: 60px;
+        left: 30px;
+
+        p {
+            position: relative;
+            font-size: 15px;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 120%;
+                height: 1px;
+                width: 100px;
+                background: v(color);
+                display: block;
+            }
+        }
+    }
+
+    .shapes {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        margin-top: 3rem;
+
+        .shape-1, .shape-2, .shape-3 {
+            position: absolute;
+            transform: translate(-50%, -50%);
+        }
+        .shape-1 {
+            top: 0;
+            left: 25%;
+        }
+        .shape-2 {
+            top: 50%;
+            left: 50%;
+            background-color: transparent;
+            mix-blend-mode: difference;
+        }
+        .shape-3 {
+            top: 90%;
+            left: 80%;
+            transform: translate(-50%, -50%) rotate(-93deg);
+        }
+        #circle {
+            circle {
+                fill: v(color);
+            }
+        }
+        #rect {
+            background-color: red;
+            mix-blend-mode: difference;
+        }
+        #trian {
+            // filter: drop-shadow(3px 9px 12px rgba(0, 0, 0, 0.7));
+            polygon {
+                fill: white;
+                stroke: #262636;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .shapes {
+        display: none;
+    }
+}
+@media (max-width: 575px) {
+    #showcase {
+        .content {
+            text-align: center;
+
+            h1 {
+                min-width: 100% !important;
+                max-width: 100% !important;
+                font-size: 17vw;
+                line-height: 17vw;
+            }
+
+        }
+        .btn {
+            margin: 1.5rem auto;
+        }
+        .vertical_text {
+            left: 0;
+        }
+    }
+}
