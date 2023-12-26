@@ -1,0 +1,36 @@
+@function v($var) {
+    @return var(--#{$var});
+}
+
+:root {
+    // light contrast
+    --background: #fff;
+    --color: black;
+    // dark mode
+    // --background: #262636;
+    // --color: #f3f3fa;
+}
+
+* {
+    font-family: 'Oswald', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    outline: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: v(color);
+}
+
+body {
+    background-color: v(background);
+    color: v(color);
+}
+
+p , li {
+    font-family: 'Open Sans', sans-serif;
+}
