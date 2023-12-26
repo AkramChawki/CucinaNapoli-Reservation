@@ -20,6 +20,9 @@ use Inertia\Inertia;
 Route::get('/', function () {
     return Inertia::render('Index');
 });
+Route::get('/test', function () {
+    return Inertia::render('Test');
+});
 Route::get('/reservation', function () {
     return Inertia::render('Reservation', [
         'canLogin' => Route::has('login'),

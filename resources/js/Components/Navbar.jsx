@@ -123,8 +123,8 @@ export default function Navbar() {
                                                 <Menu.Item>
                                                     {({ active }) => (
                                                         <Link
-                                                        href={route('logout')}
-                                                        method="post"
+                                                            href={route('logout')}
+                                                            method="post"
                                                             className={classNames(
                                                                 active
                                                                     ? "bg-gray-100"

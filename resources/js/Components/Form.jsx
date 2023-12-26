@@ -79,18 +79,9 @@ function Form() {
     };
     return (
         <div className="relative bg-white mt-10 lg:mr-10">
-            <div className="lg:absolute lg:inset-0">
-                <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-                    <img
-                        className="h-56 w-full object-cover lg:absolute lg:h-full"
-                        src="images/cover/reservation.webp"
-                        alt=""
-                    />
-                </div>
-            </div>
-            <div className="relative py-16 px-4 sm:py-24 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:py-32 lg:grid lg:grid-cols-2">
+            <div className="relative py-16 px-4 sm:py-24 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:py-32">
                 <div className="lg:pr-8">
-                    <div className="max-w-md mx-auto sm:max-w-lg lg:mx-0">
+                    <div className="max-w-lg mx-auto sm:max-w-lg lg:mx-0">
                         <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
                             Réservez votre table maintenant
                         </h2>
@@ -102,7 +93,7 @@ function Form() {
                         </p>
                         <form
                             onSubmit={handleSubmit}
-                            className="mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
+                            className="mt-9"
                         >
                             <div>
                                 <label
