@@ -81,11 +81,11 @@
     gtag('config', 'G-NPSVK7XBH1');
 </script>
 
-<body>
+<body style="color: #166534;">
     <!-- HEADER SECTION -->
     <header>
         <div class="container">
-            <a href="#" id="logo">Cucina Napoli</a>
+            <a href="#" id="logo" style="color: #166534;">Cucina Napoli</a>
             <!-- menu btn -->
             <a href="#" id="menu-open">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -95,11 +95,11 @@
                 </svg>
             </a>
             <ul class="nav-links">
-                <li><a href="https://www.cucinanapoli.com/">Accueil</a></li>
-                <li><a href="{{ url('/') }}">Reservation</a></li>
-                <li><a href="https://menu.cucinanapoli.com/">Menu</a></li>
-                <li><a href="https://www.cucinanapoli.com/contact">Contact</a></li>
-                <li><a href="{{ url('/profile') }}">Profile</a></li>
+                <li><a href="https://www.cucinanapoli.com/" style="color: #166534;">Accueil</a></li>
+                <li><a href="{{ url('/restaurants') }}" style="color: #166534;">Reservation</a></li>
+                <li><a href="https://menu.cucinanapoli.com/" style="color: #166534;">Menu</a></li>
+                <li><a href="https://www.cucinanapoli.com/contact" style="color: #166534;">Contact</a></li>
+                <li><a href="{{ url('/profile') }}" style="color: #166534;">Profile</a></li>
             </ul>
         </div>
     </header>
@@ -117,7 +117,7 @@
         </div>
         <ul>
             <li><a href="https://www.cucinanapoli.com/">Accueil</a></li>
-            <li><a href="{{ url('/') }}">Reservation</a></li>
+            <li><a href="{{ url('/restaurants') }}">Reservation</a></li>
             <li><a href="https://menu.cucinanapoli.com/">Menu</a></li>
             <li><a href="https://www.cucinanapoli.com/contact">Contact</a></li>
             <li><a href="{{ url('/profile') }}">Profile</a></li>
@@ -137,7 +137,7 @@
                 <div class="col-md-8 mx-auto">
                     <ul>
                         <li><a href="https://www.cucinanapoli.com/">Accueil</a></li>
-                        <li><a href="{{ url('/') }}">Reservation</a></li>
+                        <li><a href="{{ url('/restaurants') }}">Reservation</a></li>
                         <li><a href="https://menu.cucinanapoli.com/">Menu</a></li>
                         <li><a href="https://www.cucinanapoli.com/contact">Contact</a></li>
                         <li><a href="{{ url('/profile') }}">Profile</a></li>

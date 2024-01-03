@@ -9,7 +9,7 @@ function Merci() {
     }
 
     return (
-        <div className="bg-white">
+        <div className="bg-white h-screen">
             <header className="flex items-center justify-between px-4 py-10 sm:px-6 sm:py-8 lg:px-8">
                 <Link href="/">
                     <img src="/img/logo.webp" alt="" className="h-12 w-auto" />

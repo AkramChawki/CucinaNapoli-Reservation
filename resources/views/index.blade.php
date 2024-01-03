@@ -10,7 +10,8 @@
                         <p>LA VERA PIZZA NAPOLETANA <b>&middot;</b> PIZZA AU FEU DE BOIS</p>
                     </div>
 
-                    <a href="" target="_blank" data-text="RESERVER !!" class="btn">
+                    <a href="{{ url('/restaurants') }}" data-text="RESERVER !!" class="btn"
+                        style="background-color: #166534;">
                         <span>Maitenanat</span>
                     </a>
 
@@ -18,24 +19,16 @@
                 <div class="col-lg-6">
                     <div class="shapes">
                         <div class="shape-1">
-                            <svg id="circle" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300"
-                                xml:space="preserve">
-                                <circle cx="150" cy="150" r="150"></circle>
-                            </svg>
+                            <img src="{{ asset('images/home/img1.png') }}" id="circle" x="0px" y="0px" width="400px"
+                                height="300px" viewBox="0 0 300 300" xml:space="preserve">
                         </div>
                         <div class="shape-2">
-                            <svg id="rect" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300"
-                                xml:space="preserve">
-                                <rect width="300" height="300" fill="none" stroke="#000000" stroke-width="1px"
-                                    stroke-miterlimit="10" />
-                            </svg>
+                            <img src="{{ asset('images/home/img2.png') }}" id="rect" x="0px" y="0px" width="300px"
+                                height="300px" viewBox="0 0 300 300" xml:space="preserve">
                         </div>
                         <div class="shape-3">
-                            <svg id="trian" x="0px" y="0px" width="180px" height="180px" viewBox="0 0 180 180"
-                                xml:space="preserve">
-                                <polygon points="0,0 180,0 90,180" fill="none" stroke-width="1px"
-                                    stroke-miterlimit="10" />
-                            </svg>
+                            <img src="{{ asset('images/home/img3.png') }}" id="trian" x="0px" y="0px" width="300px"
+                                height="400px" viewBox="0 0 300 300" xml:space="preserve">
                         </div>
                     </div>
                 </div>

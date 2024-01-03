@@ -1,88 +1,110 @@
 {
-  "_AppLayout-78adfbc8.js": {
-    "file": "assets/AppLayout-78adfbc8.js",
+  "_AppLayout-2ca9f6de.js": {
+    "file": "assets/AppLayout-2ca9f6de.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_index-cbab582d.js": {
+    "file": "assets/index-cbab582d.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Auth/Login.jsx": {
-    "file": "assets/Login-c99afb72.js",
+    "file": "assets/Login-bf2a8ea2.js",
     "imports": [
       "resources/js/app.jsx",
-      "_AppLayout-78adfbc8.js"
+      "_AppLayout-2ca9f6de.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/Login.jsx"
   },
   "resources/js/Pages/Auth/Register.jsx": {
-    "file": "assets/Register-598034a6.js",
+    "file": "assets/Register-34adddc5.js",
     "imports": [
       "resources/js/app.jsx",
-      "_AppLayout-78adfbc8.js"
+      "_AppLayout-2ca9f6de.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/Register.jsx"
   },
-  "resources/js/Pages/Index.jsx": {
-    "file": "assets/Index-f388fa7d.js",
-    "imports": [
-      "resources/js/app.jsx"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/Pages/Index.jsx"
-  },
   "resources/js/Pages/Profile/Index.jsx": {
-    "file": "assets/Index-a21a499a.js",
+    "file": "assets/Index-0b01f6b3.js",
     "imports": [
       "resources/js/app.jsx",
-      "_AppLayout-78adfbc8.js"
+      "_AppLayout-2ca9f6de.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Profile/Index.jsx"
   },
+  "resources/js/Pages/Reservation.css": {
+    "file": "assets/Reservation-d2da8f06.css",
+    "src": "resources/js/Pages/Reservation.css"
+  },
   "resources/js/Pages/Reservation.jsx": {
-    "file": "assets/Reservation-041b21f9.js",
+    "css": [
+      "assets/Reservation-d2da8f06.css"
+    ],
+    "file": "assets/Reservation-75b28ee9.js",
     "imports": [
-      "resources/js/app.jsx"
+      "resources/js/app.jsx",
+      "_index-cbab582d.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Reservation.jsx"
   },
   "resources/js/Pages/Reservation/History.jsx": {
-    "file": "assets/History-f51b2a1c.js",
+    "file": "assets/History-2c27ce37.js",
     "imports": [
       "resources/js/app.jsx",
-      "_AppLayout-78adfbc8.js"
+      "_AppLayout-2ca9f6de.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Reservation/History.jsx"
   },
   "resources/js/Pages/Reservation/Merci.jsx": {
-    "file": "assets/Merci-47364468.js",
+    "file": "assets/Merci-29f5e5ff.js",
     "imports": [
       "resources/js/app.jsx"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Reservation/Merci.jsx"
   },
+  "resources/js/Pages/Restaurants.css": {
+    "file": "assets/Restaurants-cac7dd96.css",
+    "src": "resources/js/Pages/Restaurants.css"
+  },
+  "resources/js/Pages/Restaurants.jsx": {
+    "css": [
+      "assets/Restaurants-cac7dd96.css"
+    ],
+    "file": "assets/Restaurants-67e86d2a.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_index-cbab582d.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Restaurants.jsx"
+  },
   "resources/js/app.css": {
-    "file": "assets/app-53fc5501.css",
+    "file": "assets/app-1b612d83.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.jsx": {
     "css": [
-      "assets/app-53fc5501.css"
+      "assets/app-1b612d83.css"
     ],
     "dynamicImports": [
       "resources/js/Pages/Auth/Login.jsx",
       "resources/js/Pages/Auth/Register.jsx",
-      "resources/js/Pages/Index.jsx",
       "resources/js/Pages/Profile/Index.jsx",
       "resources/js/Pages/Reservation.jsx",
       "resources/js/Pages/Reservation/History.jsx",
-      "resources/js/Pages/Reservation/Merci.jsx"
+      "resources/js/Pages/Reservation/Merci.jsx",
+      "resources/js/Pages/Restaurants.jsx"
     ],
-    "file": "assets/app-f1911965.js",
+    "file": "assets/app-3eefbaca.js",
     "isEntry": true,
     "src": "resources/js/app.jsx"
   }

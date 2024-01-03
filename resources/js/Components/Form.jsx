@@ -78,14 +78,14 @@ function Form() {
 
     };
     return (
-        <div className="relative bg-white mt-10 lg:mr-10">
-            <div className="relative py-16 px-4 sm:py-24 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:py-32">
-                <div className="lg:pr-8">
-                    <div className="max-w-lg mx-auto sm:max-w-lg lg:mx-0">
-                        <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
+        <div className="flex justify-center bg-white mt-10 w-full">
+            <div className="flex py-16 px-4 sm:py-24 sm:px-6 lg:px-8 lg:mx-auto lg:py-32">
+                <div>
+                    <div className="max-w-full mx-auto lg:mx-0">
+                        <h2 className="text-7xl font-extrabold tracking-tight sm:text-4xl">
                             Réservez votre table maintenant
                         </h2>
-                        <p className="mt-4 text-lg text-gray-500 sm:mt-3">
+                        <p className="mt-4 text-2xl text-gray-500 sm:mt-3">
                             Réservez votre table en ligne dès maintenant et
                             profitez d'une expérience culinaire exceptionnelle !
                             Ne manquez pas cette occasion de vous régaler avec
@@ -98,7 +98,7 @@ function Form() {
                             <div>
                                 <label
                                     htmlFor="first-name"
-                                    className="block text-sm font-medium text-gray-700"
+                                    className="block text-xl font-medium text-gray-700"
                                 >
                                     Nom
                                 </label>
@@ -113,14 +113,14 @@ function Form() {
                                         id="nom"
                                         autoComplete="Nom"
                                         required
-                                        className="block w-full shadow-sm sm:text-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md"
+                                        className="block w-full shadow-sm sm:text-xl focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md"
                                     />
                                 </div>
                             </div>
                             <div>
                                 <label
                                     htmlFor="last-name"
-                                    className="block text-sm font-medium text-gray-700"
+                                    className="block text-xl font-medium text-gray-700"
                                 >
                                     Prénom
                                 </label>
@@ -135,7 +135,7 @@ function Form() {
                                         id="prenom"
                                         required
                                         autoComplete="prenom"
-                                        className="block w-full shadow-sm sm:text-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md"
+                                        className="block w-full shadow-sm sm:text-xl focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md"
                                     />
                                 </div>
                             </div>
@@ -143,7 +143,7 @@ function Form() {
                                 <div className="flex justify-between">
                                     <label
                                         htmlFor="phone"
-                                        className="block text-sm font-medium text-gray-700"
+                                        className="block text-xl font-medium text-gray-700"
                                     >
                                         Telephone
                                     </label>
@@ -160,14 +160,14 @@ function Form() {
                                         required
                                         autoComplete="tel"
                                         aria-describedby="phone-description"
-                                        className="block w-full shadow-sm sm:text-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md"
+                                        className="block w-full shadow-sm sm:text-xl focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md"
                                     />
                                 </div>
                             </div>
                             <div className="sm:col-span-2">
                                 <label
                                     htmlFor="email"
-                                    className="block text-sm font-medium text-gray-700"
+                                    className="block text-xl font-medium text-gray-700"
                                 >
                                     Email
                                 </label>
@@ -181,14 +181,14 @@ function Form() {
                                         }
                                         type="email"
                                         autoComplete="email"
-                                        className="block w-full shadow-sm sm:text-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md"
+                                        className="block w-full shadow-sm sm:text-xl focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md"
                                     />
                                 </div>
                             </div>
                             <div>
                                 <label
                                     htmlFor=""
-                                    className="block text-sm font-medium text-gray-700"
+                                    className="block text-xl font-medium text-gray-700"
                                 >
                                     Nombre d'adultes
                                 </label>
@@ -200,7 +200,7 @@ function Form() {
                                         onChange={(e) =>
                                             setData("adults", e.target.value)
                                         }
-                                        className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm rounded-md"
+                                        className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-xl rounded-md"
                                     >
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -214,7 +214,7 @@ function Form() {
                             <div>
                                 <label
                                     htmlFor=""
-                                    className="block text-sm font-medium text-gray-700"
+                                    className="block text-xl font-medium text-gray-700"
                                 >
                                     Nombre d'enfants
                                 </label>
@@ -226,7 +226,7 @@ function Form() {
                                         onChange={(e) =>
                                             setData("childs", e.target.value)
                                         }
-                                        className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm rounded-md"
+                                        className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-xl rounded-md"
                                     >
                                         <option disabled>0</option>
                                         <option value="1">1</option>
@@ -238,7 +238,7 @@ function Form() {
                             <div className="sm:col-span-2">
                                 <label
                                     htmlFor=""
-                                    className="block text-sm font-medium text-gray-700"
+                                    className="block text-xl font-medium text-gray-700"
                                 >
                                     Date et Heure
                                 </label>
@@ -261,7 +261,7 @@ function Form() {
                                             renderInput={(props) => (
                                                 <TextField {...props} />
                                             )}
-                                            className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm rounded-md"
+                                            className="mt-1 block w-full pl-3 pr-10 py-2 text-2xl border-gray-300 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-3xl rounded-md"
                                         />
                                     </LocalizationProvider>
                                 </div>
@@ -270,13 +270,13 @@ function Form() {
                                 <div className="flex justify-between">
                                     <label
                                         htmlFor="Notes"
-                                        className="block text-sm font-medium text-gray-700"
+                                        className="block text-xl font-medium text-gray-700"
                                     >
                                         Notes
                                     </label>
                                     <span
                                         id="notes-description"
-                                        className="text-sm text-gray-500"
+                                        className="text-2xl text-gray-500"
                                     >
                                         Max. 300 characters
                                     </span>
@@ -291,7 +291,7 @@ function Form() {
                                         }
                                         aria-describedby="notes-description"
                                         rows={2}
-                                        className="block w-full shadow-sm sm:text-sm focus:ring-green-500 focus:border-green-500 border border-gray-300 rounded-md"
+                                        className="block w-full shadow-sm sm:text-xl focus:ring-green-500 focus:border-green-500 border border-gray-300 rounded-md"
                                     />
                                 </div>
                             </div>
@@ -312,7 +312,7 @@ function Form() {
                                         className="focus:ring-green-500 h-4 w-4 text-green-600 border-gray-300 rounded"
                                     />
                                 </div>
-                                <div className="ml-3 text-sm">
+                                <div className="ml-3 text-2xl">
                                     <label
                                         htmlFor="comments"
                                         className="font-medium text-gray-700"
@@ -330,13 +330,13 @@ function Form() {
                             <div className="text-right sm:col-span-2">
                                 <a
                                     href={localisation}
-                                    className="inline-flex justify-center mr-3 py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+                                    className="inline-flex justify-center mr-3 py-2 px-4 border border-transparent shadow-sm text-2xl font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
                                 >
                                     localisation
                                 </a>
                                 <button
                                     type="submit"
-                                    className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+                                    className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-2xl font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
                                 >
                                     Reserver
                                 </button>

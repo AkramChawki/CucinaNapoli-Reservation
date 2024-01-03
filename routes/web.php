@@ -18,10 +18,10 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    return Inertia::render('Index');
+    return view("index");
 });
-Route::get('/test', function () {
-    return Inertia::render('Test');
+Route::get('/restaurants', function () {
+    return Inertia::render('Restaurants');
 });
 Route::get('/reservation', function () {
     return Inertia::render('Reservation', [

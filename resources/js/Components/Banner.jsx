@@ -31,9 +31,9 @@ const Banner = () => {
   }, []);
   return (
     <motion.div className='banner' variants={banner}>
-      <BannerRowTop title={"brand"} />
-      <BannerRowCenter title={"experience"} playMarquee={playMarquee} />
-      <BannerRowBottom title={"studio"} />
+      <BannerRowTop title={"Cucina"} />
+      <BannerRowSecond title={"Napoli"} />
+      <BannerRowCenter title={"LA VERRA PIZZA NAPOLETANA"} playMarquee={playMarquee} />
     </motion.div>
   );
 };
@@ -59,7 +59,7 @@ const AnimatedLetters = ({ title, disabled }) => (
 const BannerRowTop = ({ title }) => {
   return (
     <div className={"banner-row"}>
-      <div className='row-col'>
+      <div className='row-col text-green-700'>
         <AnimatedLetters title={title} />
       </div>
       <motion.div
@@ -72,47 +72,22 @@ const BannerRowTop = ({ title }) => {
         }}
         className='row-col'>
         <span className='row-message'>
-          We are specialised in setting up the foundation of your brand and
-          setting you up for success.
+          Cucina NAPOLI, c'est une pizzeria hyper chaleureuse et authentique où, comme à Naples, on déguste une somptueuse Margherita recouverte de bons produits et servie avec de gros bords généreux. Un four au feu de bois, des tomates San Marzano de Paolo Ruggiero et une précieuse mozzarella.
         </span>
       </motion.div>
     </div>
   );
 };
-
-const BannerRowBottom = ({ title }) => {
+const BannerRowSecond = ({ title }) => {
   return (
     <div className={"banner-row center"}>
-      <motion.div
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ ease: [0.6, 0.01, -0.05, 0.95], duration: 1, delay: 1 }}
-        className='scroll'>
-        <motion.span
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{
-            ease: "easeInOut",
-            duration: 1,
-            delay: 1.8,
-          }}>
-          scroll
-        </motion.span>
-        <motion.span
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{
-            ease: "easeInOut",
-            duration: 1,
-            delay: 1.8,
-          }}>
-          down
-        </motion.span>
-      </motion.div>
-      <AnimatedLetters title={title} />
+      <div className='row-col text-green-700'>
+        <AnimatedLetters title={title} />
+      </div>
     </div>
   );
 };
+
 
 const BannerRowCenter = ({ title, playMarquee }) => {
   return (

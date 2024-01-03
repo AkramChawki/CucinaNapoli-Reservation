@@ -1,6 +1,6 @@
 :root {
     --background: #fff;
-    --color: red
+    --color: color: #166534;
 }
 
 * {
@@ -10,7 +10,7 @@
 }
 
 html {
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
 }
 
 a {
@@ -280,23 +280,15 @@ header .nav-links li a:hover::after {
     top: 50%;
     left: 50%;
     background-color: transparent;
-    mix-blend-mode: difference
 }
 
 #showcase .shapes .shape-3 {
     top: 90%;
     left: 80%;
-    -webkit-transform: translate(-50%, -50%) rotate(-93deg);
-    transform: translate(-50%, -50%) rotate(-93deg)
 }
 
 #showcase .shapes #circle circle {
     fill: var(--color)
-}
-
-#showcase .shapes #rect {
-    background-color: red;
-    mix-blend-mode: difference
 }
 
 #showcase .shapes #trian polygon {

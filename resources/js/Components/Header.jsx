@@ -10,28 +10,25 @@ const Header = () => {
         duration: 1,
         delay: 0.6,
       }}
-      className='header'>
+      className='header '>
       <div className='header-inner'>
-        <div className='logo'>Ollie</div>
+        <div className='logo text-green-700'>Cucina Napoli</div>
         <nav className='nav'>
           <li>
-            <a href='/design'>Design</a>
+            <a href='/'>Accueil</a>
           </li>
           <li>
-            <a href='/strategy'>Strategy</a>
+            <a href='https://menu.cucinanapoli.com/'>Menu</a>
           </li>
           <li>
-            <a href='/cases'>Cases</a>
+            <a href='https://reservation.cucinanapoli.com/'>Reservation</a>
           </li>
           <li>
-            <a href='/about'>About</a>
-          </li>
-          <li>
-            <a href='/why'>Why work with us?</a>
+            <a href='/profile'>Profile</a>
           </li>
         </nav>
         <div className='contact'>
-          <a href="/contact"> Lets work together</a>
+          <a href="https://www.cucinanapoli.com/contact" className="text-green-700"> Contacter-Nous</a>
         </div>
         <div className='hamburger-menu'>
           <span></span>
