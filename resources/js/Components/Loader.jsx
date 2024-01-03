@@ -81,8 +81,8 @@ export const ImageBlock = ({ posX, posY, variants, id }) => {
       }}
     >
       <Image
-        src="/path/to/images/loader/${id}.webp"
-        fallback="/path/to/images/loader/${id}.jpg"
+        src={`/images/loader/${id}.webp`}
+        fallback={`/images/loader/${id}.jpg`}
         alt={id}
       />
     </motion.div>
