@@ -59,7 +59,7 @@ const Loader = ({ setLoading }) => {
         <motion.div variants={itemMain} className="transition-image">
           <motion.img
             layoutId="main-image-1"
-            src={import.meta.env.BASE_URL + `images/loader/image-2.jpg`}
+            src="/images/loader/image-2.jpg"
           />
         </motion.div>
         <ImageBlock variants={item} id="image-3" />
@@ -81,8 +81,8 @@ export const ImageBlock = ({ posX, posY, variants, id }) => {
       }}
     >
       <Image
-        src={import.meta.env.BASE_URL + `images/loader/${id}.webp`}
-        fallback={import.meta.env.BASE_URL + `images/loader/${id}.jpg`}
+        src="/path/to/images/loader/${id}.webp"
+        fallback="/path/to/images/loader/${id}.jpg"
         alt={id}
       />
     </motion.div>
