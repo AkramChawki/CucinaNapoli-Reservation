@@ -20,12 +20,12 @@ function Merci() {
                 {url &&
                     <button onClick={OpenWhatsapp} className="block mt-6 w-[50%] mx-auto bg-green-600 border border-transparent rounded-md shadow-sm p-4 text-sm font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 disabled:bg-gray-100 disabled:text-gray-500 disabled:cursor-not-allowed">Reserver Via Whatsapp</button>
                 }
-                <Link
+                <a
                     href="/"
                     className=" block mt-6 w-full bg-green-600 border border-transparent rounded-md shadow-sm p-4 text-sm font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 disabled:bg-gray-100 disabled:text-gray-500 disabled:cursor-not-allowed"
                 >
                     Retour à l'acceuil
-                </Link>
+                </a>
             </main>
         </div>
     );

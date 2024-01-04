@@ -728,34 +728,37 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
         <div
             class="relative bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10">
             <div class="mx-auto max-w-md">
-                <img src="{{asset('/img/logo.webp')}}" class="h-6" alt="Tailwind Play" />
+                <img src="https://www.menu.cucinanapoli.com/images/welcome/logo.jpg" style="height: 40px"
+                    alt="Cucina Napoli" />
                 <div class="divide-y divide-gray-300/50">
                     <div class="space-y-6 py-8 text-base leading-7 text-gray-600">
                         <p><b>reservation Number : </b> {{ $reservation->id }}</p>
                         <ul class="flex flex-col space-y-4">
-                                <li class="flex items-center">
-                                    <svg class="h-6 w-6 flex-none fill-green-100 stroke-green-500 stroke-2"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <circle cx="12" cy="12" r="11" />
-                                        <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
-                                    </svg>
-                                    <p class="ml-4">
-                                        Nom : 
-                                        <code class="text-sm font-bold text-gray-900"> {{ $reservation->nom }} {{ $reservation->prenom }}</code>
-                                    </p>
-                                    <p class="ml-4">
-                                        Date et Heur de reservation : 
-                                        <code class="text-sm font-bold text-gray-900"> {{ $reservation->selectedDate }}</code>
-                                    </p>
-                                    <p class="ml-4">
-                                        Telephone de Confirmation : 
-                                        <code class="text-sm font-bold text-gray-900"> {{ $reservation->telephone }}</code>
-                                    </p>
-                                    <p class="ml-4">
-                                        Email de Confirmation : 
-                                        <code class="text-sm font-bold text-gray-900"> {{ $reservation->email }}</code>
-                                    </p>
-                                </li>
+                            <li class="flex items-center">
+                                <svg class="h-6 w-6 flex-none fill-green-100 stroke-green-500 stroke-2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="11" />
+                                    <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                                </svg>
+                                <p class="ml-4">
+                                    Nom :
+                                    <code class="text-sm font-bold text-gray-900"> {{ $reservation->nom }}
+                                        {{ $reservation->prenom }}</code>
+                                </p>
+                                <p class="ml-4">
+                                    Date et Heur de reservation :
+                                    <code class="text-sm font-bold text-gray-900">
+                                        {{ $reservation->selectedDate }}</code>
+                                </p>
+                                <p class="ml-4">
+                                    Telephone de Confirmation :
+                                    <code class="text-sm font-bold text-gray-900"> {{ $reservation->telephone }}</code>
+                                </p>
+                                <p class="ml-4">
+                                    Email de Confirmation :
+                                    <code class="text-sm font-bold text-gray-900"> {{ $reservation->email }}</code>
+                                </p>
+                            </li>
                         </ul>
                     </div>
                 </div>
